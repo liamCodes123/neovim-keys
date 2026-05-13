@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice - LazyVim Neon</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LazyVim Game</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background-glow"></div>
 
-  <nav>
-    <h1>LazyVim Neon</h1>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="lessons.html">Lessons</a>
-      <a href="login.html">Account</a>
-    </div>
-  </nav>
+<div class="background-glow"></div>
 
-  <div class="practice-box">
-    <div>
-      <h2>Typing Practice</h2>
+<nav>
+<h1>LazyVim Neon</h1>
+<div>
+<a href="index.html">Home</a>
+<a href="lessons.html">Lessons</a>
+</div>
+</nav>
 
-      <p id="challenge">Type: dd</p>
+<div class="game-layout">
 
-      <input type="text" id="practice-input" placeholder="Type command here">
+<div class="game-panel">
+<h2>Vim Movement Trainer</h2>
 
-      <button onclick="checkPractice()">Submit</button>
+<p id="objective">
+Reach the glowing square using h j k l.
+</p>
 
-      <p id="practice-result"></p>
-    </div>
-  </div>
+<div id="game-board"></div>
 
-  <script src="script.js"></script>
+<div class="stats">
+<p>Level: <span id="level">1</span></p>
+<p>Last Command: <span id="command">none</span></p>
+</div>
+</div>
+
+<div class="lesson-sidebar">
+<h3>Controls</h3>
+
+<ul>
+<li><strong>h</strong> → move left</li>
+<li><strong>j</strong> → move down</li>
+<li><strong>k</strong> → move up</li>
+<li><strong>l</strong> → move right</li>
+<li><strong>dd</strong> → destroy a wall</li>
+<li><strong>yy</strong> → duplicate player clone</li>
+<li><strong>u</strong> → undo clone</li>
+</ul>
+
+<p class="tip">Click the page first, then type.</p>
+</div>
+
+</div>
+
+<script src="game.js"></script>
+
 </body>
 </html>
